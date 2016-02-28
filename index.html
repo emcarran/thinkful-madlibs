@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="ngMadLibs" ng-controller="madLibsController">
-    <title>ngMadLibs - version: {{version}}</title>
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+<title>ngMadLibs - version: {{version}}</title>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <br>
 
@@ -24,28 +25,28 @@
             <form name="madForm" ng-submit="submitted=true;submit()">
                 <div class="row text-center">
                     <h2>Select a gender:</h2>
-                    <input type="radio" ng-checked="{{gender.pronoun == 'he'}}" ng-click="gender.pronoun='he';gender.poss='his'" id="male" name="gender" value="male" placeholder="">
+                    <input type="radio" ng-click="gender.pronoun='he';gender.poss='his'" id="male" name="gender" value="male" placeholder="">
                     <label for="gender">Male</label>
-                    <input type="radio" ng-checked="{{gender.pronoun == 'she'}}" ng-click="gender.pronoun='she';gender.possessive='her'" id="female" name="gender" value="female" placeholder="">
+                    <input type="radio" ng-click="gender.pronoun='she';gender.poss='her'" id="female" name="gender" value="female" placeholder="">
                     <label for="gender">Female</label>
                 </div>
                 <div class="row text-center">
                     <h2>Provide the following words:</h2>
                 </div>
                 <div class="col-md-4 text-center">
-                    <input type="text" placeholder="name" ng-model="data.name" required>
-                    <input type="text" placeholder="job title" ng-model="data.job_title" required>
-                    <input type="text" placeholder="tedious task" ng-model="data.tedious_task" required>
+                    <input class="col-xs-12 text-center" type="text" placeholder="name" ng-model="data.name" required>
+                    <input class="col-xs-12 text-center" type="text" placeholder="job title" ng-model="data.job_title" required>
+                    <input class="col-xs-12 text-center" type="text" placeholder="tedious task" ng-model="data.tedious_task" required>
                 </div>
                 <div class="col-md-4 text-center">
-                    <input type="text" placeholder="dirty task" ng-model="data.dirty_task" required>
-                    <input type="text" placeholder="celebrity" ng-model="data.celebrity" required>
-                    <input type="text" placeholder="useless skill" ng-model="data.useless_skill" required>
+                    <input class="col-xs-12 text-center" type="text" placeholder="dirty task" ng-model="data.dirty_task" required>
+                    <input class="col-xs-12 text-center" type="text" placeholder="celebrity" ng-model="data.celebrity" required>
+                    <input class="col-xs-12 text-center" type="text" placeholder="useless skill" ng-model="data.useless_skill" required>
                 </div>
                 <div class="col-md-4 text-center">
-                    <input type="text" placeholder="obnoxiuous celebrity" ng-model="data.obnoxiuous_celebrity" required>
-                    <input type="number" placeholder="huge number" ng-model="data.huge_number" required>
-                    <input type="text" placeholder="adjective" ng-model="data.adjective" required>
+                    <input class="col-xs-12 text-center" type="text" placeholder="obnoxiuous celebrity" ng-model="data.obnoxiuous_celebrity" required>
+                    <input class="col-xs-12 text-center" type="number" placeholder="huge number" ng-model="data.huge_number" required>
+                    <input class="col-xs-12 text-center" type="text" placeholder="adjective" ng-model="data.adjective" required>
                 </div>
                 <div class="row text-center">
                     <button type="submit" class="btn btn-lg btn-default submit-btn">Submit</button>
@@ -57,8 +58,8 @@
     <!-- results -->
     <div ng-show="hideForm && madForm.$valid" class="row content results">
         <div class="col-md-8 col-md-offset-2 border override">
-            <p><span class="standout">{{data.name}}</span> was a <span class="standout">{{data.job_title}}</span> who loved technology. Although {{gender.pronoun}} loved parts of {{poss}} job, {{gender.pronoun}} absolutely hated  <span class="standout">{{data.tedious_task}}</span> and <span class="standout">{{data.dirty_task}}</span>. So, <span class="standout">{{data.my_name}}</span> met with {{poss}} life mentor <span class="standout">{{data.celebrity}}</span> who told {{poss}} to learn how to <span class="standout">{{data.useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="standout">{{data.useless_skill}}</span> so {{gender.pronoun}} studied programming instead.</p>
-            <p>What a great decision! With {{poss}} new skills, <span class="standout">{{data.my_name}}</span> built a(n) <span class="standout">{{data.adjective}}</span> robot named <span class="standout">{{data.obnoxiuous_celebrity}}</span> that not only loved <span class="standout">{{data.dirty_task}}</span> but did it <span class="standout">{{data.huge_number}}</span> faster.</p>
+            <p><span class="standout">{{data.name}}</span> was a <span class="standout">{{data.job_title}}</span> who loved technology. Although <span class="gender-standout">{{gender.pronoun}}</span> loved parts of <span class="gender-standout">{{gender.poss}}</span> job, <span class="gender-standout">{{gender.pronoun}}</span> absolutely hated <span class="standout">{{data.tedious_task}}</span> and <span class="standout">{{data.dirty_task}}</span>. So, <span class="gender-standout">{{gender.pronoun}}</span> <span class="standout">{{data.my_name}}</span> met with <span class="gender-standout">{{gender.poss}}</span> life mentor <span class="standout">{{data.celebrity}}</span> who told <span class="gender-standout">{{gender.poss}}</span> to learn how to <span class="standout">{{data.useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="standout">{{data.useless_skill}}</span> so <span class="gender-standout">{{gender.pronoun}}</span> studied programming instead.</p>
+            <p>What a great decision! With <span class="gender-standout">{{gender.poss}}</span> new skills, <span class="standout">{{data.my_name}}</span> built a(n) <span class="standout">{{data.adjective}}</span> robot named <span class="standout">{{data.obnoxiuous_celebrity}}</span> that not only loved <span class="standout">{{data.dirty_task}}</span> but did it <span class="standout">{{data.huge_number}}</span> faster.</p>
             <div class="row text-center">
                 <button type="button" ng-click="reset()" class="btn btn-lg btn-default reset-btn">Reset</button>
             </div>
@@ -75,4 +76,5 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular-animate.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

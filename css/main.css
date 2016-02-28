@@ -1,65 +1,88 @@
 body {
-  font-family: "Comic Sans MS", serif;
-  font-size: 250%;
+    font-family: "Comic Sans MS", serif;
+    font-size: 250%;
 }
-footer {
-  font-size: small;
-  text-align: center;
-  padding: 10px 0px;
+
+input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
+
 .inputs {
-  font-size: 70%;
+    font-size: 60%;
 }
+
 .border {
-  border: thick solid black;
+    border: thick solid black;
 }
+
 .almost-border {
-  border-top: thick solid black;
-  border-bottom: thick solid black;
-  border-right: thick solid black;
+    border-top: thick solid black;
+    border-bottom: thick solid black;
+    border-right: thick solid black;
 }
+
 .override {
-  border-top: thin solid black;
-  padding: 35px;
+    border-top: thin solid black;
+    padding: 35px;
 }
+
 .row-height-min {
-  height: 140px;
+    height: 140px;
 }
+
 .logo {
-  width: 40%;
+    width: 40%;
 }
+
 .smiley {
-  padding: 5px;
-  max-height: 90%;
-  max-width: 90%;
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
+    padding: 5px;
+    max-height: 90%;
+    max-width: 90%;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
 }
+
 .standout {
-  font-weight: bold;
-  color: red;
-  font-style: italic;
+    font-weight: bold;
+    color: red;
+    font-style: italic;
 }
-.submit-btn, .reset-btn {
-  margin-top: 15px;
+
+.gender-standout {
+    font-weight: bold;
+    color: darkgrey;
 }
+
+.submit-btn,
+.reset-btn {
+    margin-top: 15px;
+}
+
 .content {
-  min-height: 450px;
+    min-height: 450px;
 }
-
-
 
 .results.ng-hide-add {
-  -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s;
-  opacity:0;
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    opacity: 0;
 }
+
 .results.ng-hide-remove {
-  -webkit-transition:0.5s linear all;
-  transition:0.5s linear all;
-  opacity:1;
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    opacity: 1;
 }
-.results.ng-hide-add, .results.ng-hide-remove {
-  display:block!important;
+
+.results.ng-hide-add,
+.results.ng-hide-remove {
+    display: block!important;
+}
+
+footer {
+    font-size: small;
+    text-align: center;
+    padding: 10px 0px;
 }
