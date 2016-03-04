@@ -22,7 +22,7 @@
     <!-- inputs -->
     <div class="row content" ng-hide="hideForm && madForm.$valid">
         <div class="col-md-8 col-md-offset-2 border override">
-            <form name="madForm" ng-submit="submitted=true;submit()">
+            <form name="madForm" ng-submit="submitted=true;submit()" novalidate>
                 <div class="row text-center">
                     <h2>Select a gender:</h2>
                     <input type="radio" ng-click="gender.pronoun='he';gender.poss='his'" id="male" name="gender" value="male" placeholder="">
@@ -34,7 +34,13 @@
                     <h2>Provide the following words:</h2>
                 </div>
                 <div class="col-md-4 text-center">
-                    <input class="col-xs-12 text-center" type="text" placeholder="name" ng-model="data.name" required>
+                    <div class="form-group" ng-class="{ 'has-error': madForm.name.$touched && madForm.name.$invalid }">
+                        <input class="col-xs-12 text-center" type="text" name="name" placeholder="name" ng-model="data.name" required>
+                        <div class="help-block" ng-messages="madForm.name.$error" ng-if="madForm.name.$touched">
+                            <p ng-message="required">This field is required.</p>
+                        </div>
+                    </div>
+
                     <input class="col-xs-12 text-center" type="text" placeholder="job title" ng-model="data.job_title" required>
                     <input class="col-xs-12 text-center" type="text" placeholder="tedious task" ng-model="data.tedious_task" required>
                 </div>
@@ -72,9 +78,12 @@
     </footer>
 
     <!-- scripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular-animate.min.js"></script>
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-messages.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-animate.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
