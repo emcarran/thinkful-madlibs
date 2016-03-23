@@ -1,4 +1,4 @@
-var app = angular.module('ngMadLibs', ['ngAnimate'])
+var app = angular.module('ngMadLibs', ['ngAnimate', 'ngMessages'])
 
 app.constant('VERSION', "5")
 app.run(function (VERSION, $rootScope) {
