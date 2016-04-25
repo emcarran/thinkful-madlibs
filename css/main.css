@@ -1,11 +1,31 @@
 body {
     font-family: "Comic Sans MS", serif;
-    font-size: 250%;
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 1.3rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+p,
+label,
+.ng-scope {
+    font-size: 1rem;
+}
+
+p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 input {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .inputs {
@@ -36,11 +56,6 @@ input {
 }
 
 .smiley {
-    padding: 5px;
-    max-height: 90%;
-    max-width: 90%;
-    width: auto;
-    display: inline-block;
     vertical-align: middle;
 }
 
@@ -83,6 +98,11 @@ input {
 .results.ng-hide-add,
 .results.ng-hide-remove {
     display: block!important;
+}
+
+.checkbox-inline,
+.radio-inline {
+    vertical-align: bottom;
 }
 
 footer {
