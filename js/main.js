@@ -18,5 +18,6 @@ app.run(function (VERSION, $rootScope) {
     $scope.reset = function () {
         $scope.inputHide = false;
         $scope.data = {};
+        location.reload();
     }
 });

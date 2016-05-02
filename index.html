@@ -17,32 +17,28 @@
                 </div>
                 <div class="col-xs-8 col-lg-offset-1">
                     <img class="col-xs-12" src="img/ng-mad-libs-logo.png" alt="">
-                    <h1 class="col-xs-12">Automate This!</h1>
+                    <h1 class="col-xs-12">Have a go at this:</h1>
                 </div>
             </div>
         </header>
-        <section class="gender col-xs-12" ng-hide="inputHide && madInput.$valid">
-            <div class="col-md-6 col-md-offset-3 text-center">
-
-                <form role="form">
-                    <p class="radio-inline">I am a:</p>
-                    <label class="radio-inline">
-                        <input type="radio" name="gender" id='male' value='male' ng-click="gender.heShe = 'he'; gender.hisHer = 'his'; gender.himHer = 'him'">Boy
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="gender" id='female' value='female' ng-click="gender.heShe = 'she'; gender.hisHer = 'her'; gender.himHer = 'her'">Girl
-                    </label>
-                </form>
-            </div>
-        </section>
         <section class="userInput col-xs-12" ng-hide="inputHide && madInput.$valid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2>Complete the following:</h2>
-                </div>
-            </div>
             <form name="madInput" ng-submit="submit()" novalidate>
                 <div class="row">
+                    <div class="col-xs-12 gender ">
+                        <div class="form-group col-md-6 col-md-offset-3 text-center">
+                            <p class="radio-inline">I am a:</p>
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id='male' value='male' ng-model="data.gender" ng-click="gender.heShe = 'he'; gender.hisHer = 'his'; gender.himHer = 'him'" required>Boy
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id='female' value='female' ng-model="data.gender" ng-click="gender.heShe = 'she'; gender.hisHer = 'her'; gender.himHer = 'her'" required>Girl
+                            </label>
+                            <div class='errorMsg' ng-if="madInput.gender.$error.required" ng-messages="madInput.gender.$error">
+                                <div ng-message="required">Please select a gender</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group col-xs-12 ">
                             <input class="col-xs-12" type="text" name="name" placeholder="name" ng-model="data.name" required>
@@ -114,10 +110,10 @@
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group col-xs-12 ">
-                            <input class="col-xs-12" type="number" name="hugeNumber" placeholder='huge number' ng-model="data.hugeNumber" ng-pattern="\d">
+                            <input class="col-xs-12" type="number" name="hugeNumber" placeholder='huge number' ng-model="data.hugeNumber" required>
                             <div class='errorMsg col-xs-12 ' ng-if="madInput.hugeNumber.$touched" ng-messages="madInput.hugeNumber.$error">
                                 <div ng-message="required">Please enter a number</div>
-                                <div ng-message="pattern">Only digits, please!</div>
+                                <div ng-message="number">Only digits, please!</div>
                             </div>
                         </div>
                     </div>
