@@ -17,8 +17,11 @@ label,
     font-size: 1rem;
 }
 
-.ng-scope {
+.errorMsg {
     color: red;
+    background-color: #eee;
+    padding: 3px;
+    padding-left: 10px;
 }
 
 p {

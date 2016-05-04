@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Angular MadLibs</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -34,7 +35,7 @@
                                 <input type="radio" name="gender" id='female' value='female' ng-model="data.gender" ng-click="gender.heShe = 'she'; gender.hisHer = 'her'; gender.himHer = 'her'" required>Girl
                             </label>
                             <div class='errorMsg' ng-if="madInput.gender.$error.required" ng-messages="madInput.gender.$error">
-                                <div ng-message="required">Please select a gender</div>
+                                <div ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please select a gender</div>
                             </div>
                         </div>
                     </div>
@@ -42,8 +43,8 @@
                     <div class="col-xs-12 col-md-4">
                         <div class="form-group col-xs-12 ">
                             <input class="col-xs-12" type="text" name="name" placeholder="name" ng-model="data.name" required>
-                            <div class='errorMsg' ng-if="madInput.name.$touched" ng-messages="madInput.name.$error">
-                                <div ng-message="required">Please enter a name</div>
+                            <div class='errorMsg  col-xs-12 ' ng-if="madInput.name.$touched" ng-messages="madInput.name.$error">
+                                <div ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please enter a name</div>
                             </div>
                         </div>
                     </div>
@@ -51,7 +52,7 @@
                         <div class="form-group col-xs-12 ">
                             <input class="col-xs-12" type="text" name="jobTitle" placeholder='job title' ng-model="data.jobTitle" required>
                             <div class='errorMsg col-xs-12 ' ng-if="madInput.jobTitle.$touched" ng-messages="madInput.jobTitle.$error">
-                                <div ng-message="required">Please enter a job</div>
+                                <div ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please enter a job</div>
                             </div>
                         </div>
                     </div>
@@ -60,7 +61,7 @@
                         <div class="form-group col-xs-12 ">
                             <input class="col-xs-12" type="text" name="tediousTask" placeholder='tedious task' ng-model="data.tediousTask" required>
                             <div class='errorMsg col-xs-12 ' ng-if="madInput.tediousTask.$touched" ng-messages="madInput.tediousTask.$error">
-                                <div ng-message="required">Please enter a task</div>
+                                <div ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please enter a task</div>
                             </div>
                         </div>
                     </div>
@@ -70,7 +71,7 @@
                         <div class="form-group col-xs-12 ">
                             <input class="col-xs-12" type="text" name="dirtyTask" placeholder='dirty task' ng-model="data.dirtyTask" required>
                             <div class='errorMsg col-xs-12 ' ng-if="madInput.dirtyTask.$touched" ng-messages="madInput.dirtyTask.$error">
-                                <div ng-message="required">Please enter a task</div>
+                                <div ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please enter a task</div>
                             </div>
                         </div>
                     </div>
@@ -78,7 +79,7 @@
                         <div class="form-group col-xs-12 ">
                             <input class="col-xs-12" type="text" name="celebrity" placeholder='celebrity' ng-model="data.celebrity" required>
                             <div class='errorMsg col-xs-12 ' ng-if="madInput.celebrity.$touched" ng-messages="madInput.celebrity.$error">
-                                <div ng-message="required">Please enter a celebrity</div>
+                                <div ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please enter a celebrity</div>
                             </div>
                         </div>
                     </div>
@@ -86,7 +87,7 @@
                         <div class="form-group col-xs-12 ">
                             <input class="col-xs-12" type="text" name="uselessSkill" placeholder='useless skill' ng-model="data.uselessSkill" required>
                             <div class='errorMsg col-xs-12 ' ng-if="madInput.uselessSkill.$touched" ng-messages="madInput.uselessSkill.$error">
-                                <div ng-message="required">Please enter a useless skill</div>
+                                <div ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please enter a useless skill</div>
                             </div>
                         </div>
                     </div>
@@ -96,7 +97,7 @@
                         <div class="form-group col-xs-12 ">
                             <input class="col-xs-12" type="text" name="adjective" placeholder='adjective' ng-model="data.adjective" required>
                             <div class='errorMsg col-xs-12 ' ng-if="madInput.adjective.$touched" ng-messages="madInput.adjective.$error">
-                                <div ng-message="required">Please enter an adjective</div>
+                                <div ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please enter an adjective</div>
                             </div>
                         </div>
                     </div>
@@ -104,7 +105,7 @@
                         <div class="form-group col-xs-12 ">
                             <input class="col-xs-12" type="text" name="obnoxiousCelebrity" placeholder='obnoxious celebrity' ng-model="data.obnoxiousCelebrity" required>
                             <div class='errorMsg col-xs-12 ' ng-if="madInput.obnoxiousCelebrity.$touched" ng-messages="madInput.obnoxiousCelebrity.$error">
-                                <div ng-message="required">Please enter an obnoxious celebrity</div>
+                                <div ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please enter an obnoxious celebrity</div>
                             </div>
                         </div>
                     </div>
@@ -112,8 +113,8 @@
                         <div class="form-group col-xs-12 ">
                             <input class="col-xs-12" type="number" name="hugeNumber" placeholder='huge number' ng-model="data.hugeNumber" required>
                             <div class='errorMsg col-xs-12 ' ng-if="madInput.hugeNumber.$touched" ng-messages="madInput.hugeNumber.$error">
-                                <div ng-message="required">Please enter a number</div>
-                                <div ng-message="number">Only digits, please!</div>
+                                <div ng-message="required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please enter a number</div>
+                                <div ng-message="number"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Only digits, please!</div>
                             </div>
                         </div>
                     </div>
