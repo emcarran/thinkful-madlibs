@@ -1,10 +1,11 @@
 body {
-    font-family: "Comic Sans MS", serif;
+    font-family: 'Architects Daughter', cursive;
     font-size: 30px;
 }
 
 h1 {
     font-size: 1.3rem;
+    margin-bottom: 2rem;
 }
 
 h2 {
@@ -24,6 +25,10 @@ label,
     padding-left: 10px;
 }
 
+.ng-inactive {
+    display: none;
+}
+
 p {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -38,6 +43,23 @@ input {
 
 .inputs {
     font-size: 60%;
+}
+
+.userInput,
+.mainText {
+    margin-top: 2rem;
+    border: 1px solid #ddd;
+    padding-bottom: 2rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.66);
+    -moz-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.66);
+    box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.66);
+}
+
+.mainText p {
+    font-size: 1.4rem;
 }
 
 .border {
