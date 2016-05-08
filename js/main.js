@@ -1,6 +1,6 @@
 var app = angular.module('myApp', ['ngMessages'])
 
-app.constant('VERSION', "6")
+app.constant('VERSION', "6.4")
 app.run(function (VERSION, $rootScope) {
     $rootScope.version = VERSION;
 })

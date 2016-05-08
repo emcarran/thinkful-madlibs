@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angular MadLibs</title>
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -18,7 +20,6 @@
                 </div>
                 <div class="col-xs-8 col-lg-offset-1">
                     <img class="col-xs-12" src="img/ng-mad-libs-logo.png" alt="">
-                    <h1 class="col-xs-12">Have a go at this:</h1>
                 </div>
             </div>
         </header>
@@ -27,7 +28,7 @@
                 <div class="row">
                     <div class="col-xs-12 gender ">
                         <div class="form-group col-md-6 col-md-offset-3 text-center">
-                            <p class="radio-inline">I am a:</p>
+                            <p class="radio-inline">Mad Libs for a:</p>
                             <label class="radio-inline">
                                 <input type="radio" name="gender" id='male' value='male' ng-model="data.gender" ng-click="gender.heShe = 'he'; gender.hisHer = 'his'; gender.himHer = 'him'" required>Boy
                             </label>
